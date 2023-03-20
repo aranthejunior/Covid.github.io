@@ -8,6 +8,10 @@ fetch('https://api.covid19api.com/summary')
   const country = data.Countries;
   // masukan kode untuk menampilkan pada HTML
       // ...
+      document.getElementById("hdrTotalCases").innerText += " " + totalCases;
+      document.getElementById("hdrTotalDeaths").innerText += " " + totalDeaths;
+      document.getElementById("hdrTotalRecovered").innerText += " " + totalRecovered;
+
       for (let i = 0; i < country.length; i++) {
         const tableRow = document.createElement("tr");
         tableRow.id = "tableRow";
@@ -15,10 +19,7 @@ fetch('https://api.covid19api.com/summary')
 
         //create Country Name
     }
-      document.getElementById("hdrTotalCases").innerText += " " + totalCases;
-      document.getElementById("hdrTotalDeaths").innerText += " " + totalDeaths;
-      document.getElementById("hdrTotalRecovered").innerText += " " + totalRecovered;
-
+     
       for (let i = 0; i < country.length; i++) {
         //Country Name
         const countryList = document.createElement("td");
@@ -39,9 +40,9 @@ fetch('https://api.covid19api.com/summary')
       }
 })
 .catch(error => console.error(error));
-$(document).ready(function () {
-    $('#table').DataTable();
-});
+// $(document).ready(function () {
+//     $('#covidTable').DataTable();
+// });
 
 
 
