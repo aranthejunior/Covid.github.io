@@ -1,0 +1,13 @@
+body{
+    background-image:url("./covid.png");
+    /* background-position: center; */
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    color: white;
+    font-family: monospace;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
